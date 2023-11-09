@@ -1,10 +1,5 @@
 #!/bin/bash
 
-watchexec --project-origin . -w processes \ 
-aws s3 sync \
-/Users/alan/workshop/minecraft-lua/processes/ \
-s3://aws-minecraft-files/processes/ \
---profile Greenfield_Alan_Smith \
---size-only \
---exclude "*.DS_Store" \
---exclude ".git/*" \
+# watchexec --project-origin . -w processes -w examples \ 
+bash -c 'aws s3 sync /Users/alan/workshop/minecraft-lua/ s3://aws-minecraft-files/ --profile Greenfield_Alan_Smith --size-only --include "processes" --include "examples" --exclude "*.DS_Store" --exclude ".git/*" --dryrun'
+
