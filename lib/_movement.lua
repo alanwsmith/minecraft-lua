@@ -73,7 +73,7 @@
     turtle.turnRight()
   end
 
-  local up = function(steps)
+ up = function(steps)
     for step = 1, steps do
       print("-- Fuel: " .. turtle.getFuelLevel())
       print("-- Move up: " .. step)

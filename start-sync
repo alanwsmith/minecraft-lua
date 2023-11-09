@@ -15,6 +15,5 @@ s3://aws-minecraft-files/ \
 --include "processes" \
 --exclude "*.DS_Store" \
 --exclude ".git/\*" \
---size-only
 
 

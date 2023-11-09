@@ -1,9 +1,7 @@
-require "/_movement"
+-- require "/_cut_chunk"
+-- cut_chunk()
+--
+print("---- Starting: main ----")
 
-if turtle.getFuelLevel() > 100 then
-cut_hall(10)
-back(20)
-else
-    print("not enough fuel")
-end
-
+require("/_make_stairs")
+make_stairs(20)

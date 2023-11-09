@@ -5,3 +5,4 @@ local output = fs.open("startup.lua", "w")
 output.write(response.readAll())
 output.close()
 os.reboot()
+
