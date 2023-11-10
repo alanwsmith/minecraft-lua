@@ -24,8 +24,11 @@ end
 
 downloadFile("_doesSlotHaveName.lua")
 downloadFile("_doesSlotHaveTag.lua")
+downloadFile("_findSlotWithName.lua")
+downloadFile("_findSlotWithTag.lua")
 downloadFile("_getSlotItemName.lua")
 downloadFile("_movement.lua")
+downloadFile("_placeTorch.lua")
 downloadFile("left.lua")
 downloadFile("back.lua")
 downloadFile("down.lua")

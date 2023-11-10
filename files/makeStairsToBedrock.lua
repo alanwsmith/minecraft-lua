@@ -1,4 +1,5 @@
 require "/_movement"
+require "/_placeTorch"
 
 local makeStairsToBedrock = function()
   local height = 4
@@ -16,26 +17,13 @@ local makeStairsToBedrock = function()
     turnRight()
     forward(1)
     down(height)
+    -- place torch
+    if stair % 2 == 0 then
+      placeTorch()
+    end
     turnLeft()
   end
-
-
-
-  -- turnRight()
-
-  -- down(height)
-  -- forward(1)
-  -- down(1)
-  -- turnRight()
-  -- forward(1)
-  -- turnLeft()
-  -- up(height)
-  -- forward(1)
-
-  -- turnRight()
-  -- down(height)
 end
-
 
 makeStairsToBedrock()
 

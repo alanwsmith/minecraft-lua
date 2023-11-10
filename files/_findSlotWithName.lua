@@ -4,6 +4,7 @@
 
 findSlotWithName = function(name)
   for slot = 1, 16 do
+    print("slot: " .. slot)
     local details = turtle.getItemDetail(slot, true)
     if details ~= nil then
       if details.name ~= nil then
