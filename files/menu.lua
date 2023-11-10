@@ -1,8 +1,6 @@
-require "/_domain"
-
 local commands = {
   "refuelTurtle",
-  "makeStairs",
+  "makeStairsToBedrock",
   "getAllSlotDetails",
 }
 
@@ -15,14 +13,17 @@ for k, v in ipairs(commands) do
   print(k .. " - " .. v)
 end
 
-
 local id = io.read()
 
 if id ~= "" then
   local indexNum = tonumber(id)
   local command = commands[indexNum]
   if command then
+    local domainFile = fs.open("_domain.txt", "r")
+    local domain = domainFile.readLine()
+    domainFile.close()
     shell.run("wget run " .. domain .. "/files/" .. command .. ".lua")
+    print("")
   else
     print("---------------------")
     print("Not a valid command")

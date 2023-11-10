@@ -32,12 +32,12 @@ forward = function(steps)
   end
 end
 
-left = function()
+turnLeft = function()
   print("-- Turning Left - Remaining Fuel: " .. turtle.getFuelLevel())
   turtle.turnLeft()
 end
 
-right = function()
+turnRight = function()
   print("-- Turning Right - Remaining Fuel: " .. turtle.getFuelLevel())
   turtle.turnRight()
 end
