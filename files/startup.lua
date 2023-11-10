@@ -22,6 +22,7 @@ downloadFile = function(fileName)
   end
 end
 
+downloadFile("_getSlotItemName.lua")
 downloadFile("_movement.lua")
 downloadFile("left.lua")
 downloadFile("back.lua")

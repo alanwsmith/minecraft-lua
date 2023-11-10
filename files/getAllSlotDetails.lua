@@ -16,3 +16,5 @@ getAllSlotDetails = function()
 end
 
 getAllSlotDetails()
+
+shell.run("edit item_details.txt")

@@ -1,5 +1,10 @@
-print("")
-print("Refueling is not yet implemented")
+local refuelTurtle = function()
+  print("")
+  print("In progress")
+end
+
+refuelTurtle()
+
 print("")
 print("Press any key to return to the menu")
 io.read()
