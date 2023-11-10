@@ -1,18 +1,11 @@
 #!/bin/bash
 
 watchexec --project-origin . \
--w processes \
--w examples \
--w lib \
--w move \
+-w ./ \
 aws s3 sync \
 /Users/alan/workshop/minecraft-lua/ \
 s3://aws-minecraft-files/ \
 --profile Greenfield_Alan_Smith \
---include "examples" \
---include "lib" \
---include "move" \
---include "processes" \
 --exclude "*.DS_Store" \
 --exclude ".git/\*" \
 

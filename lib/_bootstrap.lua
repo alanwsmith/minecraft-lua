@@ -15,9 +15,4 @@ end
 
 download("/lib/_download.lua", "_download.lua")
 download("/lib/_library_loader.lua", "_library_loader.lua")
-
-local name_file = fs.open("name.txt", "r")
-local name = name_file.readLine()
-download(name, "startup.lua")
-
-os.reboot()
+download("/menu/menu.lua", "menu.lua")
