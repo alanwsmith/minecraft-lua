@@ -12,21 +12,25 @@ if fuel > 100 then
   print("Choose a program to run")
   print("1 - Harvest Trees")
   print("2 - Make Stairs")
-  print("3 - Cut Chunk")
+  print("3 - Clear Chunk")
   print("4 - Cut Hall")
+  print("5 - Make Path")
+  print("6 - Rename Turtle")
+
   local id = io.read()
 
   if id == "1" then
-    print("Harvesting Trees")
     shell.execute("harvest-trees")
   elseif id == "2" then
-    print("Making Stairs")
-    shell.execute("make-stairs")
+    shell.execute("makeStairs")
   elseif id == "3" then
-    print("Cutting Chunk")
-    shell.execute("cut-chunk")
+    shell.execute("clearChunk")
   elseif id == "4" then
     shell.execute("cutHall")
+  elseif id == "5" then
+    shell.execute("makePath")
+  elseif id == "6" then
+    shell.execute("renameTurtle")
   else
     print("No match")
   end

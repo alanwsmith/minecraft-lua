@@ -1,26 +1,20 @@
-# minecraft-lua
+-- title
+
+Alan's Minecraft Lua Scripts For Computer Craft
 
 Lua Programs For CC Tweaked (Computer Craft) in Minecraft
 
-## Bootstrapping
+-- h1
 
-Type in the "bootstrap_template.lua" file manually
-with the path to the process start you want to 
-use
+Bootstrapping
 
-I save it as "bootstrap.lua" and then copy it 
-over to "startup.lua" in case I make a mistake. 
-That keeps the content from being wiped out
-and having to start over completely.
+Do:
 
-After the starup.lua content is in place, 
-reboot the computer twice. The first time
-pulls down the actually startup.lua file
-and the second time runs it
+-- code
 
-Keeping "bootstrap.lau" also allows for getting
-the main "startup.lau" back if it
-gets messed up
+wget http://aws-minecraft-files.s3-website-us-east-1.amazonaws.com/bootstrap/startup.lua
+
+reboot
 
 
 

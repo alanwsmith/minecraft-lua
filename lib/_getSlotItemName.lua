@@ -1,4 +1,4 @@
-getItemName = function(slot)
+getSlotItemName = function(slot)
   local details = turtle.getItemDetail(slot)
   if details ~= nil then
     return details.name
