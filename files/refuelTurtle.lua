@@ -1,2 +1,6 @@
+print("")
 print("Refueling is not yet implemented")
-shell.run("reboot")
+print("")
+print("Press any key to return to the menu")
+io.read()
+shell.run("menu")
