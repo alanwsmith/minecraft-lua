@@ -1,7 +1,7 @@
-doesSlotHaveTag = function(slot, tag)
+doesSlotHaveName = function(slot, name)
   local details = turtle.getItemDetail(slot, true)
-  for key, val in pairs(details.tags) do
-    if key == tag then
+  if details then
+    if details.name == name then
       return true
     end
   end
