@@ -1,3 +1,5 @@
+require "/_doesBlockHaveTag"
+require "/_findSlotWithTag"
 require "/_movement"
 
 local get_wood = function()
@@ -12,21 +14,36 @@ local get_wood = function()
 end
 
 local plant_sapling = function()
-  turtle.place()
+  if findSlotWithTag("minecraft:saplings") ~= nil then
+    turtle.dig() -- clear snow, etc...
+    turtle.place()
+  end
 end
 
-if turtle.getFuelLevel() > 100 then
-  local trees = 18
-  for loopNum = 1, trees do
-    get_wood()
-    plant_sapling()
-    left()
-    forward(2)
+local harvest_trees = function(trees)
+  if turtle.getFuelLevel() > 200 then
+    for loopNum = 1, trees do
+      local has_block, data = turtle.inspect()
+      if has_block then
+        for key, val in pairs(data.tags) do
+          if key == "minecraft:logs" then
+            get_wood()
+          end
+        end
+      end
+      plant_sapling()
+      left()
+      forward(2)
+      right()
+    end
     right()
+    forward(trees * 2)
+    left()
+  else
+    print("Not enough fuel")
   end
-  right()
-  forward(trees * 2)
-  left()
-else
-  print("Not enough fuel")
 end
+
+print("How many trees")
+local numberOfTrees = tonumber(io.read())
+harvest_trees(numberOfTrees)

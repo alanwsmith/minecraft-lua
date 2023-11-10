@@ -16,3 +16,4 @@ end
 download("/lib/_download.lua", "_download.lua")
 download("/lib/_library_loader.lua", "_library_loader.lua")
 download("/menu/menu.lua", "menu.lua")
+print("Fuel Level: " .. turtle.getFuelLevel())

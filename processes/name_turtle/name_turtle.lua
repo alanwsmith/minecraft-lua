@@ -1,1 +1,1 @@
-os.setComputerLabel("Michaelangelo")
+os.setComputerLabel("Leonardo")

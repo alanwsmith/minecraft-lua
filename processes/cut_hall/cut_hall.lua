@@ -16,13 +16,14 @@ cut_hall = function(steps)
     while turtle.detectUp() do
       turtle.digUp()
     end
-    -- not sure why this would need to
-    -- repeat. this should prevent
-    -- problems with bedrock if the
-    -- while loop is off or gone
-    -- while turtle.detectDown() do
     turtle.digDown()
-    -- end
+    if step % 6 == 0 then
+      left()
+      forward(1)
+      back(1)
+      turtle.place()
+      right()
+    end
   end
   left()
   left()

@@ -2,8 +2,7 @@ back = function(steps)
   turtle.turnRight()
   turtle.turnRight()
   for step = 1, steps do
-    print("-- Fuel: " .. turtle.getFuelLevel())
-    print("-- Move back: " .. step)
+    print("-- Move back - Remaining Fuel: " .. turtle.getFuelLevel())
     while turtle.detect() do
       turtle.dig()
     end
@@ -15,8 +14,7 @@ end
 
 down = function(steps)
   for step = 1, steps do
-    print("-- Fuel: " .. turtle.getFuelLevel())
-    print("-- Move down: " .. step)
+    print("-- Move down - Remaining Fuel: " .. turtle.getFuelLevel())
     while turtle.detectDown() do
       turtle.digDown()
     end
@@ -26,8 +24,7 @@ end
 
 forward = function(steps)
   for step = 1, steps do
-    print("-- Fuel: " .. turtle.getFuelLevel())
-    print("-- Move forward: " .. step)
+    print("-- Move forward - Remaining Fuel: " .. turtle.getFuelLevel())
     while turtle.detect() do
       turtle.dig()
     end
@@ -36,19 +33,18 @@ forward = function(steps)
 end
 
 left = function()
-  print("-- Move: Turning left")
+  print("-- Turning Left - Remaining Fuel: " .. turtle.getFuelLevel())
   turtle.turnLeft()
 end
 
 right = function()
-  print("-- Move: Turning right")
+  print("-- Turning Right - Remaining Fuel: " .. turtle.getFuelLevel())
   turtle.turnRight()
 end
 
 up = function(steps)
   for step = 1, steps do
-    print("-- Fuel: " .. turtle.getFuelLevel())
-    print("-- Move up: " .. step)
+    print("-- Move up - Remaining Fuel: " .. turtle.getFuelLevel())
     while turtle.detectUp() do
       turtle.digUp()
     end
@@ -56,3 +52,18 @@ up = function(steps)
   end
 end
 
+digDown = function()
+  -- note: this doesn't keep trying
+  -- in case it hits bedrock, not sure
+  -- what cases there are where it
+  -- would need to regardless
+  print("-- Digging down - Remaining Fuel: " .. turtle.getFuelLevel())
+  turtle.digDown()
+end
+
+digUp = function()
+  print("-- Digging up - Remaining Fuel: " .. turtle.getFuelLevel())
+  while turtle.detectUp() do
+    turtle.digUp()
+  end
+end

@@ -6,7 +6,7 @@ local fuel = turtle.getFuelLevel()
 
 if fuel > 100 then
   print("---------------------------")
-  print("-- Curnet Fuel: " .. turtle.getFuelLevel() .. " --")
+  print("-- Current Fuel: " .. turtle.getFuelLevel() .. " --")
   print("---------------------------")
 
   print("Choose a program to run")
@@ -26,7 +26,7 @@ if fuel > 100 then
     print("Cutting Chunk")
     shell.execute("cut-chunk")
   elseif id == "4" then
-    shell.execute("cut_hall")
+    shell.execute("cutHall")
   else
     print("No match")
   end
