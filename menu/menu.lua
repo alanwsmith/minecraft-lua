@@ -5,11 +5,8 @@ require "/_library_loader"
 local fuel = turtle.getFuelLevel()
 
 if fuel > 100 then
-  print("---------------------------")
-  print("-- Current Fuel: " .. turtle.getFuelLevel() .. " --")
-  print("---------------------------")
+  print("Choose a program (Fuel: " .. turtle.getFuelLevel() .. ")")
 
-  print("Choose a program to run")
   print("1 - Harvest Trees")
   print("2 - Make Stairs")
   print("3 - Clear Chunk")

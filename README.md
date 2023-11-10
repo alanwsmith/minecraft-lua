@@ -12,9 +12,9 @@ Do:
 
 -- code
 
-wget http://aws-minecraft-files.s3-website-us-east-1.amazonaws.com/bootstrap/startup.lua
+wget run https://www.alanwsmith.com/minecraft/init.lua
 
-reboot
+
 
 
 
