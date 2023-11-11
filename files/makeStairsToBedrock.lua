@@ -29,8 +29,8 @@ end
 
 local makeStairsToBedrock = function()
   local height = 5
-  local steps = 2
-  for stair = 1, steps do
+  local stepsDown = 2
+  for stair = 1, stepsDown do
     forward(1)
     down(1)
     makeSureThereIsFloor()
@@ -38,6 +38,7 @@ local makeStairsToBedrock = function()
     turnLeft()
     forward(1)
     down(height)
+    makeSureThereIsFloor()
     turnRight()
     forward(1)
     down(1)
@@ -46,6 +47,7 @@ local makeStairsToBedrock = function()
     turnRight()
     forward(1)
     down(height)
+    makeSureThereIsFloor()
     if stair % 2 == 0 then
       up(3)
       placeTorch()
@@ -57,13 +59,12 @@ local makeStairsToBedrock = function()
   -- come back
   turnRight()
   turnRight()
-  up(2)
-  for stair = 1, steps + 1 do
+  up(1)
+  for stair = 1, stepsDown + 1 do
     forward(1)
     up(1)
   end
   forward(1)
-  down(1)
   turnLeft()
   turnLeft()
 end
