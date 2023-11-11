@@ -1,5 +1,6 @@
 require "/_movement"
 require "/_placeTorch"
+require "/_findSlotWithNames"
 
 -- TODO: Look for bedrock to stop
 -- TODO: Place stairs back up
@@ -14,6 +15,15 @@ makeSureThereIsFloor = function()
     down(1)
     makeSureThereIsFloor()
     up(1)
+    local slot = findSlotWithNames({
+      "minecraft:cobblestone",
+      "minecraft:dirt",
+      "minecraft:grass_block",
+      "minecraft:stone",
+    })
+    if slot then
+      turtle.placeDown()
+    end
   end
 end
 
@@ -31,6 +41,7 @@ local makeStairsToBedrock = function()
     turnRight()
     forward(1)
     down(1)
+    makeSureThereIsFloor()
     up(height)
     turnRight()
     forward(1)

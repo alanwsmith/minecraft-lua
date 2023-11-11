@@ -1,4 +1,7 @@
+require "/_movement"
+
 local commands = {
+  "testRun",
   "getAllSlotDetails",
   "getBlockDetails",
   "harvestTrees",
@@ -26,6 +29,26 @@ if id ~= "" then
     domainFile.close()
     shell.run("wget run " .. domain .. "/files/" .. command .. ".lua")
     print("")
+  elseif id == "u" then
+    up(1)
+    shell.run("menu")
+  elseif id == "d" then
+    down(1)
+    shell.run("menu")
+  elseif id == "l" then
+    turnLeft()
+    shell.run("menu")
+  elseif id == "r" then
+    turnRight()
+    shell.run("menu")
+  elseif id == "f" then
+    forward(1)
+    shell.run("menu")
+  elseif id == "b" then
+    back(1)
+    shell.run("menu")
+  elseif id == "t" then
+    shell.run("menu")
   else
     print("---------------------")
     print("Not a valid command")
