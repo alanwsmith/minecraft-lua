@@ -1,9 +1,14 @@
 require "/_movement"
 require "/_placeTorch"
 
+-- TODO: Look for bedrock to stop
+-- TODO: Place stairs back up
+-- TODO: Plug lava
+-- TODO: Place base step blocks if they're not there
+
 local makeStairsToBedrock = function()
-  local height = 4
-  for stair = 1, 3 do
+  local height = 5
+  for stair = 1, 20 do
     forward(1)
     down(1)
     up(height)
@@ -17,9 +22,10 @@ local makeStairsToBedrock = function()
     turnRight()
     forward(1)
     down(height)
-    -- place torch
     if stair % 2 == 0 then
+      up(3)
       placeTorch()
+      down(3)
     end
     turnLeft()
   end

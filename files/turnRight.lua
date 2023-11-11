@@ -1,4 +1,3 @@
 require "/_movement"
 
-right(1)
-
+turnRight(1)

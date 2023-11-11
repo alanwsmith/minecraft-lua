@@ -1,7 +1,9 @@
 local commands = {
-  "refuelTurtle",
-  "makeStairsToBedrock",
   "getAllSlotDetails",
+  "getBlockDetails",
+  "harvestTrees",
+  "makeStairsToBedrock",
+  "refuelTurtle",
 }
 
 print("---------------------")
