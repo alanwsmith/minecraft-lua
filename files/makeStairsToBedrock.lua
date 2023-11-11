@@ -5,12 +5,25 @@ require "/_placeTorch"
 -- TODO: Place stairs back up
 -- TODO: Plug lava
 -- TODO: Place base step blocks if they're not there
+--
+
+makeSureThereIsFloor = function()
+  local has_block, data = turtle.inspectDown()
+  if has_block == false then
+    print("missing floor")
+    down(1)
+    makeSureThereIsFloor()
+    up(1)
+  end
+end
 
 local makeStairsToBedrock = function()
   local height = 5
-  for stair = 1, 20 do
+  local steps = 2
+  for stair = 1, steps do
     forward(1)
     down(1)
+    makeSureThereIsFloor()
     up(height)
     turnLeft()
     forward(1)
@@ -29,6 +42,19 @@ local makeStairsToBedrock = function()
     end
     turnLeft()
   end
+
+  -- come back
+  turnRight()
+  turnRight()
+  up(2)
+  for stair = 1, steps + 1 do
+    forward(1)
+    up(1)
+  end
+  forward(1)
+  down(1)
+  turnLeft()
+  turnLeft()
 end
 
 makeStairsToBedrock()

@@ -13,6 +13,7 @@ back = function(steps)
 end
 
 down = function(steps)
+  -- TODO: Watch out for bedrock with this
   for step = 1, steps do
     print("-- Move down - Remaining Fuel: " .. turtle.getFuelLevel())
     while turtle.detectDown() do
