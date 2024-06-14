@@ -1,5 +1,5 @@
 local download = function(url_path, output_name)
-  local domain = "http://aws-minecraft-files.s3-website-us-east-1.amazonaws.com"
+  local domain = "https://raw.githubusercontent.com"
   print("Getting: " .. output_name)
   local response = http.get(domain .. url_path)
   local status = response.getResponseCode()
@@ -13,7 +13,7 @@ local download = function(url_path, output_name)
   end
 end
 
-download("/lib/_download.lua", "_download.lua")
-download("/lib/_library_loader.lua", "_library_loader.lua")
-download("/menu/menu.lua", "menu.lua")
+download("/alanwsmith/minecraft-lua/lib/_download.lua", "_download.lua")
+download("/alanwsmith/minecraft-lua/lib/_library_loader.lua", "_library_loader.lua")
+download("/alanwsmith/minecraft-lua/menu/menu.lua", "menu.lua")
 print("Fuel Level: " .. turtle.getFuelLevel())
