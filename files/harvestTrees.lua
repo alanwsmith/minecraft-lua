@@ -53,7 +53,6 @@ turnRight()
 forward(1)
 turnRight()
 
-print("----------------------")
-print("Press any key to return to the menu")
-io.read()
+
+print("Completed: harvestTrees")
 shell.run("menu")

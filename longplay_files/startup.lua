@@ -5,7 +5,7 @@ downloadFile = function(fileName)
   local domainFile = fs.open("_domain.txt", "r")
   local domain = domainFile.readLine()
   domainFile.close()
-  local url = domain .. "/files/" .. fileName
+  local url = domain .. "/longplay_files/" .. fileName
   local response = http.get(url)
   if response then
     local status = response.getResponseCode()

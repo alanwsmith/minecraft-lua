@@ -1,14 +1,12 @@
 require "/_movement"
 require "/_findSlotWithName"
 
-placeTorch = function()
+placeTorchDown = function()
   local torchSlot = findSlotWithName("minecraft:torch")
   if torchSlot ~= nil then
-    forward(1)
-    back(1)
-    turtle.place()
+    turtle.placeDown()
     print("-- Torch placed")
   else
-    print("-- No torch available")
+    print("-- No torch to place")
   end
 end
