@@ -13,7 +13,7 @@ local download = function(url_path, output_name)
   end
 end
 
-download("/alanwsmith/minecraft-lua/lib/_download.lua", "_download.lua")
-download("/alanwsmith/minecraft-lua/lib/_library_loader.lua", "_library_loader.lua")
-download("/alanwsmith/minecraft-lua/menu/menu.lua", "menu.lua")
+download("/alanwsmith/minecraft-lua/main/lib/_download.lua", "_download.lua")
+download("/alanwsmith/minecraft-lua/main/lib/_library_loader.lua", "_library_loader.lua")
+download("/alanwsmith/minecraft-lua/main/menu/menu.lua", "menu.lua")
 print("Fuel Level: " .. turtle.getFuelLevel())

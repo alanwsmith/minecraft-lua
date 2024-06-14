@@ -6,11 +6,12 @@ Alan's Minecraft Lua Scripts For CC Tweaked (Computer Craft)
 
 Bootstrapping
 
-Do:
+Run this to bootstrap a bot to load the current items in. 
 
 -- code
+-- lua
 
-wget run https://www.alanwsmith.com/minecraft/init.lua
+wget run https://raw.githubusercontent.com/alanwsmith/minecraft-lua/main/wget-init.lua
 
 
 
